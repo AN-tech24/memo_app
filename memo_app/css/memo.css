@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif; /* ページ全体のフォントを設定 */
+    background-color: #f4f4f4; /* 背景色を設定 */
+    margin: 0; /* 外側の余白をリセット */
+    padding: 0; /* 内側の余白をリセット */
+    display: flex; /* Flexboxレイアウトを使用 */
+    justify-content: center; /* 中央揃え */
+    align-items: center; /* 垂直方向に中央揃え */
+    height: 100vh; /* ビューポートの高さを100%に設定 */
+}
+
+.container {
+    max-width: 600px; /* コンテンツの最大幅を設定 */
+    margin: 0 auto; /* 中央に配置 */
+    padding: 20px; /* 内側の余白を設定 */
+    background-color: #9acffa; /* 背景色を白に設定 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* ボックスの影を追加 */
+    border-radius: 8px; /* 角を丸くする */
+}
+
+h1, h2 {
+    text-align: center; /* タイトルを中央揃え */
+    color: #333; /* 文字色を設定 */
+}
+
+.input-container {
+    display: flex; /* Flexboxレイアウトを使用 */
+    gap: 10px; /* 入力フィールド間の間隔を設定 */
+    margin-bottom: 20px; /* 下部のマージンを設定 */
+}
+
+input[type="text"], input[type="number"] {
+    flex-grow: 1; /* 入力フィールドが均等に成長する */
+    padding: 10px; /* 内側の余白を設定 */
+    border: 1px solid #ddd; /* 枠線の色を設定 */
+    border-radius: 4px; /* 角を丸くする */
+}
+
+button {
+    padding: 10px 20px; /* 内側の余白を設定 */
+    border: none; /* 枠線を無くす */
+    background-color: #007BFF; /* 背景色を設定 */
+    color: white; /* 文字色を白に設定 */
+    cursor: pointer; /* カーソルをポインタにする */
+    border-radius: 4px; /* 角を丸くする */
+    transition: background-color 0.3s ease; /* 背景色の変化にトランジションを追加 */
+}
+
+button:hover {
+    background-color: #0056b3; /* ホバー時の背景色を設定 */
+}
+
+ul {
+    list-style: none; /* リストマーカーを無効にする */
+    padding: 0; /* 内側の余白をリセット */
+    margin: 0 0 20px 0; /* 外側の余白をリセット */
+}
+
+li {
+    display: flex; /* フレックスボックスレイアウトを使用 */
+    align-items: center; /* 垂直方向に中央揃え */
+    justify-content: space-between; /* 水平方向にスペースを均等に配置 */
+    padding: 10px; /* 内側の余白を設定 */
+    border-bottom: 1px solid #ccc; /* 下線を追加 */
+    background-color: #fafafa; /* 背景色を設定 */
+    border-radius: 4px; /* 角を丸くする */
+    margin-bottom: 10px; /* 下部のマージンを設定 */
+    opacity: 0; /* 初期状態の不透明度を0に設定 */
+    transform: translateY(-20px); /* 初期状態でアイテムを上に移動 */
+    animation: fadeIn 0.5s forwards; /* フェードインアニメーションを適用 */
+}
+
+li span {
+    flex-grow: 1; /* 残りのスペースを占有する */
+}
+
+li button {
+    margin-left: 10px; /* 左側の余白を設定 */
+    background-color: #dc3545; /* 背景色を赤に設定 */
+    padding: 5px 10px; /* 内側の余白を設定 */
+    border-radius: 4px; /* 角を丸くする */
+}
+
+li button:hover {
+    background-color: #201e9e; /* ホバー時の背景色を設定 */
+}
+
+.button-container {
+    display: flex; /* Flexboxレイアウトを使用 */
+    gap: 10px; /* ボタン間の間隔を設定 */
+    justify-content: center; /* 中央揃え */
+    margin-top: 20px; /* 上部のマージンを設定 */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* 最終的な不透明度を1に設定 */
+        transform: translateY(0); /* 元の位置に戻す */
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}

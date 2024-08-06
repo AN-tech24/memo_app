@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8"> <!-- 文字エンコーディングを指定 -->
+    <title>メモメモアプリ</title> <!-- ページのタイトルを設定 -->
+    <link rel="stylesheet" href="css/memo.css"> <!-- CSSファイルをリンク -->
+</head>
+<body>
+    <div class="container">
+        <h1>メモアプリ</h1> <!-- アプリのタイトルを表示 -->
+        <div class="input-container">
+            <input type="text" id="itemInput" placeholder="メモを入力"> <!-- メモ入力用のテキストボックス -->
+            <input type="number" id="quantityInput" placeholder="数量を入力"> <!-- 数量入力用の数値ボックス -->
+            <button id="addButton">追加</button> <!-- メモ追加ボタン -->
+        </div>
+        <h2>未完了アイテム</h2>
+        <ul id="itemList"></ul> <!-- メモリストを表示するためのリスト要素 -->
+        <h2>完了したアイテム</h2>
+        <ul id="completedList"></ul> <!-- 完了したアイテムリスト -->
+        <div class="button-container">
+            <button id="exportButton">エクスポート</button> <!-- データエクスポートボタン -->
+            <input type="file" id="importInput" accept=".json"> <!-- データインポート入力 -->
+        </div>
+    <script src="js/memo2.js"></script> <!-- JavaScriptファイルをリンク -->
+</body>
+</html>
